@@ -1,0 +1,228 @@
+:root {
+    /* Gold Palette - inspired by "Consultoría León" luxury feel */
+    --primary-color: #C5A059;
+    /* Classic Gold */
+    --primary-dark: #9A7B34;
+    /* Darker Gold for hover/active */
+    --accent-color: #E5C56C;
+    /* Lighter Gold */
+
+    --text-color: #333333;
+    --text-light: #666666;
+
+    --light-bg: #f9f9f9;
+    --white: #ffffff;
+
+    --font-heading: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-body: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --spacing-container: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+/* Header */
+.site-header {
+    background-color: var(--white);
+    /* Changed to White */
+    color: var(--text-color);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--primary-color);
+    /* Thin gold line */
+}
+
+.container {
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.logo-text {
+    font-family: 'Cinzel', serif;
+    /* Standard Cinzel for the rest */
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    /* NILO part */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-initial {
+    font-family: 'Cinzel Decorative', cursive;
+    /* Only for N */
+}
+
+.logo-highlight {
+    color: var(--primary-color);
+    /* TECH part in Gold */
+    font-family: 'Cinzel', serif;
+    /* Ensure TECH is also standard Cinzel */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    /* Dark links */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+    /* Gold hover */
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('../img/Fondo.png');
+    background-color: #0f2027;
+    /* Fallback */
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align box to bottom */
+    padding-bottom: 0;
+}
+
+/* The Overlapping "White Box" */
+.hero-card {
+    background: var(--white);
+    text-align: center;
+    padding: 50px 60px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(50%);
+    /* This pushes it half-way down out of the hero */
+    position: relative;
+    z-index: 10;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.hero-title span {
+    font-weight: 700;
+    display: block;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Spacer for the overlapping card */
+.hero-spacer {
+    height: 180px;
+    /* Space to accommodate the card overlay */
+}
+
+/* Services Section (below the spacer) */
+.features-section {
+    padding: 60px 0 100px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.feature-title {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+/* Footer (Basic) */
+footer {
+    background: #111;
+    color: #777;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
